@@ -1,0 +1,105 @@
+:root {
+    --secondary-color: #ce1212;
+    --light-color: #fff;
+    --txt-color: #7f7f90;
+    --primary-font: "Amatic SC", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+    --txt-font: "Open Sans", sans-serif;
+    --background-primary:#fff;
+    --background-secondary1:#fff;
+   
+    --mode-txt:#000;
+  }
+  :root:has(#mode:checked)
+  {
+    --background-primary:#000;
+    --mode-txt:#fff;
+    --background-secondary1:#171717;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-style: normal;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  .mg-section {
+    margin: 40px 0;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  
+  figure img {
+    width: 100%;
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  .header-txt {
+    color: var(--secondary-color);
+    margin: 0 5px;
+  }
+  /**************************nav**************************/
+  nav{
+  background-color: var(--background-primary);
+  }
+  nav span{
+    color: var(--secondary-color);
+  }
+  nav h1{
+    font-size:32px ;
+    font-family: var(--secondary-font);
+    padding-left: 20px;
+    color: var(--mode-txt);
+  }
+  nav .container{
+    display: flex;
+    flex-direction: row;
+  
+    justify-content: space-between;
+   align-items: center;
+  }
+  
+  nav  i{
+    font-size: 32px;
+    padding-right: 20px;
+    color: var(--mode-txt);
+  }
+  nav  ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  justify-content: flex-start;
+  
+  }
+  nav  ul li{
+  
+    list-style-type: none;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+  
+  }
+  nav  ul li a{
+    text-decoration: none;
+    color: var(--txt-color);
+  }
+  /*************************mode*********************/
+  .nav-mode .light{
+    display: none;
+  }
+  .nav-mode:has(#mode:checked) .light{
+    display: block;
+  }
+  .nav-mode:has(#mode:checked) .dark{
+    display: none;
+  }
